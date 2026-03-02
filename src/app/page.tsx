@@ -1,4 +1,5 @@
 "use client";
+import WellnessDashboard from "@/components/features/wellness-dashboard";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -279,6 +280,11 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      {/* ============================================================ */}
+      {/*  WELLNESS DASHBOARD                                           */}
+      {/* ============================================================ */}
+      <WellnessDashboard />
 
       {/* ============================================================ */}
       {/*  2. INTRO / ABOUT                                             */}

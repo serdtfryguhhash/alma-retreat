@@ -15,6 +15,12 @@ const navLinks = [
   { href: "/villa", label: "The Villa" },
   { href: "/experience", label: "Experience" },
   { href: "/retreats", label: "Retreats" },
+  { href: "/practice", label: "Practice" },
+  { href: "/guide", label: "Guide" },
+  { href: "/journal", label: "Journal" },
+  { href: "/poses", label: "Poses" },
+  { href: "/community", label: "Community" },
+  { href: "/challenges", label: "Challenges" },
 ];
 
 export default function Navbar() {
@@ -66,14 +72,14 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-10 md:flex">
+        <div className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm font-medium tracking-wide transition-colors duration-300 ${
+                className={`relative text-[13px] font-medium tracking-wide transition-colors duration-300 ${
                   showTransparent
                     ? isActive
                       ? "text-white"
@@ -96,14 +102,14 @@ export default function Navbar() {
           {/* Book Now Button */}
           <Link
             href="/retreats"
-            className="rounded-full bg-[#5B7B5E] px-6 py-2.5 text-sm font-medium tracking-wide text-white transition-all duration-300 hover:bg-[#4A6A4D] hover:shadow-md"
+            className="rounded-full bg-[#5B7B5E] px-5 py-2 text-[13px] font-medium tracking-wide text-white transition-all duration-300 hover:bg-[#4A6A4D] hover:shadow-md"
           >
             Book Now
           </Link>
         </div>
 
         {/* Mobile Menu */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
               <button
@@ -149,8 +155,8 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Links */}
-                <div className="flex flex-1 flex-col justify-center px-6">
-                  <div className="space-y-2">
+                <div className="flex-1 overflow-y-auto px-6 py-4">
+                  <div className="space-y-1">
                     {navLinks.map((link) => {
                       const isActive = pathname === link.href;
                       return (
@@ -158,7 +164,7 @@ export default function Navbar() {
                           key={link.href}
                           href={link.href}
                           onClick={() => setMobileOpen(false)}
-                          className={`group flex items-center justify-between rounded-xl px-4 py-4 text-lg transition-all duration-300 ${
+                          className={`group flex items-center justify-between rounded-xl px-4 py-3 text-base transition-all duration-300 ${
                             isActive
                               ? "bg-[#C8A96E]/10 text-[#2D2A26]"
                               : "text-[#2D2A26]/60 hover:bg-[#C8A96E]/5 hover:text-[#2D2A26]"
@@ -176,7 +182,7 @@ export default function Navbar() {
                   </div>
 
                   {/* Mobile Book Now */}
-                  <div className="mt-10">
+                  <div className="mt-6">
                     <Link
                       href="/retreats"
                       onClick={() => setMobileOpen(false)}
