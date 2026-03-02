@@ -16,6 +16,10 @@ import {
   ArrowRight,
   Star,
   Quote,
+  PlayCircle,
+  Heart,
+  MessageCircle,
+  Instagram,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -131,6 +135,45 @@ const testimonials = [
   },
 ];
 
+const instagramPosts = [
+  {
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80",
+    alt: "Morning yoga session on a sunlit terrace",
+    likes: 324,
+    comments: 18,
+  },
+  {
+    image: "https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=600&q=80",
+    alt: "Fresh healthy breakfast bowl with tropical fruits",
+    likes: 287,
+    comments: 12,
+  },
+  {
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+    alt: "Pilates session in a bright studio",
+    likes: 412,
+    comments: 24,
+  },
+  {
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+    alt: "Crystal clear Mediterranean beach at golden hour",
+    likes: 536,
+    comments: 31,
+  },
+  {
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80",
+    alt: "Meditation practice at sunset",
+    likes: 298,
+    comments: 15,
+  },
+  {
+    image: "https://images.unsplash.com/photo-1540539234-c14a20fb7c7b?w=600&q=80",
+    alt: "Luxury infinity pool overlooking mountains",
+    likes: 471,
+    comments: 27,
+  },
+];
+
 /* ------------------------------------------------------------------ */
 /*  Page Component                                                     */
 /* ------------------------------------------------------------------ */
@@ -149,8 +192,20 @@ export default function Home() {
           priority
           className="object-cover"
         />
-        {/* Gradient overlay */}
+        {/* Static dark gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+        {/* Animated shifting gradient overlay */}
+        <div className="hero-gradient-animated absolute inset-0" />
+
+        {/* Floating bokeh particles (CSS only) */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div className="bokeh-particle bokeh-1 absolute left-[10%] top-[20%] h-32 w-32 rounded-full bg-[#C8A96E]/15" />
+          <div className="bokeh-particle bokeh-2 absolute left-[70%] top-[15%] h-48 w-48 rounded-full bg-white/8" />
+          <div className="bokeh-particle bokeh-3 absolute left-[50%] top-[60%] h-24 w-24 rounded-full bg-[#5B7B5E]/15" />
+          <div className="bokeh-particle bokeh-1 absolute left-[85%] top-[70%] h-36 w-36 rounded-full bg-[#C8A96E]/10" />
+          <div className="bokeh-particle bokeh-2 absolute left-[25%] top-[75%] h-20 w-20 rounded-full bg-white/10" />
+          <div className="bokeh-particle bokeh-3 absolute left-[40%] top-[30%] h-40 w-40 rounded-full bg-[#5B7B5E]/10" />
+        </div>
 
         {/* Content */}
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
@@ -196,28 +251,32 @@ export default function Home() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/villa"
+                href="#experience"
                 className="inline-flex items-center gap-2 rounded-full border border-white/40 px-8 py-4 text-sm font-medium tracking-wide text-white transition-all duration-300 hover:border-white hover:bg-white/10"
               >
-                View The Villa
+                <PlayCircle className="h-5 w-5" />
+                Watch Our Story
               </Link>
             </motion.div>
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll-down indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          >
-            <ChevronDown className="h-6 w-6 text-white/50" />
-          </motion.div>
+          <div className="scroll-indicator flex flex-col items-center gap-2">
+            <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-white/40">
+              Scroll
+            </span>
+            <div className="flex flex-col items-center gap-0.5">
+              <ChevronDown className="h-4 w-4 text-white/50" />
+              <ChevronDown className="-mt-2 h-4 w-4 text-white/30" />
+            </div>
+          </div>
         </motion.div>
       </section>
 
@@ -620,7 +679,90 @@ export default function Home() {
       </section>
 
       {/* ============================================================ */}
-      {/*  7. FINAL CTA                                                 */}
+      {/*  7. INSTAGRAM SOCIAL FEED                                     */}
+      {/* ============================================================ */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={stagger}
+            className="mb-14 text-center"
+          >
+            <motion.div variants={fadeInUp} className="mb-4 flex justify-center">
+              <div className="gold-line" />
+            </motion.div>
+            <motion.h2
+              variants={fadeInUp}
+              className="font-[family-name:var(--font-playfair)] text-3xl font-semibold text-[#2D2A26] sm:text-4xl lg:text-5xl"
+            >
+              Follow Our Journey
+            </motion.h2>
+            <motion.p
+              variants={fadeInUp}
+              className="mt-3 text-base text-[#C8A96E] font-medium"
+            >
+              @almaretreatmallorca
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={stagger}
+            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {instagramPosts.map((post, i) => (
+              <motion.div
+                key={i}
+                variants={fadeInUp}
+                className="insta-card aspect-square shadow-sm"
+              >
+                <Image
+                  src={post.image}
+                  alt={post.alt}
+                  width={600}
+                  height={600}
+                  className="h-full w-full object-cover"
+                />
+                <div className="insta-overlay">
+                  <div className="flex items-center gap-1.5 text-white">
+                    <Heart className="h-5 w-5 fill-white" />
+                    <span className="text-sm font-semibold">{post.likes}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-white">
+                    <MessageCircle className="h-5 w-5 fill-white" />
+                    <span className="text-sm font-semibold">{post.comments}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="mt-10 text-center"
+          >
+            <a
+              href="https://instagram.com/almaretreatmallorca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 rounded-full border border-[#2D2A26]/15 bg-white px-8 py-3.5 text-sm font-medium tracking-wide text-[#2D2A26] shadow-sm transition-all duration-300 hover:border-[#2D2A26]/30 hover:shadow-md"
+            >
+              <Instagram className="h-5 w-5" />
+              Follow Us on Instagram
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/*  8. FINAL CTA                                                 */}
       {/* ============================================================ */}
       <section className="relative overflow-hidden py-32 lg:py-40">
         {/* Background image */}

@@ -106,38 +106,86 @@ const notIncluded = [
   },
 ];
 
-const upcomingDates = [
+const upcomingRetreats = [
   {
-    name: "Spring Awakening",
-    dates: [
-      "April 10\u201313, 2026",
-      "April 10\u201315, 2026",
-      "April 10\u201317, 2026",
-    ],
+    dateRange: "March 20\u201322",
+    month: "MAR",
+    startDay: 20,
+    endDay: 22,
+    packageType: "Weekend Reset",
+    price: "\u20AC1,850",
+    spotsLeft: 2,
+    duration: "3 nights",
   },
   {
-    name: "Summer Solstice",
-    dates: [
-      "June 19\u201322, 2026",
-      "June 19\u201324, 2026",
-      "June 19\u201326, 2026",
-    ],
+    dateRange: "April 7\u201311",
+    month: "APR",
+    startDay: 7,
+    endDay: 11,
+    packageType: "Deep Dive",
+    price: "\u20AC2,950",
+    spotsLeft: 5,
+    duration: "5 nights",
   },
   {
-    name: "Late Summer Glow",
-    dates: [
-      "September 4\u20137, 2026",
-      "September 4\u20139, 2026",
-      "September 4\u201311, 2026",
-    ],
+    dateRange: "April 25\u2013May 1",
+    month: "APR",
+    startDay: 25,
+    endDay: 1,
+    packageType: "Full Transformation",
+    price: "\u20AC3,850",
+    spotsLeft: 0,
+    duration: "7 nights",
   },
   {
-    name: "Autumn Reset",
-    dates: [
-      "October 16\u201319, 2026",
-      "October 16\u201321, 2026",
-      "October 16\u201323, 2026",
-    ],
+    dateRange: "May 15\u201317",
+    month: "MAY",
+    startDay: 15,
+    endDay: 17,
+    packageType: "Weekend Reset",
+    price: "\u20AC1,850",
+    spotsLeft: 8,
+    duration: "3 nights",
+  },
+  {
+    dateRange: "June 1\u20135",
+    month: "JUN",
+    startDay: 1,
+    endDay: 5,
+    packageType: "Deep Dive",
+    price: "\u20AC2,950",
+    spotsLeft: 4,
+    duration: "5 nights",
+  },
+  {
+    dateRange: "June 20\u201326",
+    month: "JUN",
+    startDay: 20,
+    endDay: 26,
+    packageType: "Full Transformation",
+    price: "\u20AC3,850",
+    spotsLeft: 6,
+    duration: "7 nights",
+  },
+  {
+    dateRange: "July 10\u201312",
+    month: "JUL",
+    startDay: 10,
+    endDay: 12,
+    packageType: "Weekend Reset",
+    price: "\u20AC1,850",
+    spotsLeft: 10,
+    duration: "3 nights",
+  },
+  {
+    dateRange: "August 4\u20138",
+    month: "AUG",
+    startDay: 4,
+    endDay: 8,
+    packageType: "Deep Dive",
+    price: "\u20AC2,950",
+    spotsLeft: 3,
+    duration: "5 nights",
   },
 ];
 
@@ -433,7 +481,7 @@ export default function RetreatsPage() {
         <div className="section-divider" />
       </div>
 
-      {/* Upcoming Dates */}
+      {/* Upcoming Retreats — Availability Calendar */}
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
@@ -447,8 +495,11 @@ export default function RetreatsPage() {
               2026 Calendar
             </span>
             <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-[#2D2A26] md:text-4xl">
-              Upcoming Retreat Dates
+              Upcoming Retreats
             </h2>
+            <p className="mx-auto mt-4 max-w-xl text-[#2D2A26]/60">
+              Secure your spot before it&apos;s gone. Our retreats fill up fast.
+            </p>
             <div className="mx-auto mt-6 gold-line" />
           </motion.div>
 
@@ -457,39 +508,115 @@ export default function RetreatsPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
             variants={staggerContainer}
-            className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2"
+            className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
           >
-            {upcomingDates.map((retreat) => (
-              <motion.div
-                key={retreat.name}
-                variants={fadeInUp}
-                className="group rounded-2xl border border-[#C8A96E]/10 bg-white/60 p-8 transition-all duration-500 hover:border-[#C8A96E]/30 hover:bg-white hover:shadow-lg hover:shadow-[#C8A96E]/5"
-              >
-                <div className="mb-1 flex items-center gap-3">
-                  <Calendar className="h-5 w-5 text-[#C8A96E]" strokeWidth={1.5} />
-                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#2D2A26]">
-                    {retreat.name}
-                  </h3>
-                </div>
-                <div className="mt-4 space-y-2">
-                  {retreat.dates.map((date, index) => (
-                    <p
-                      key={index}
-                      className="text-sm text-[#2D2A26]/60"
-                    >
-                      {date}
-                      <span className="ml-2 text-xs text-[#2D2A26]/30">
-                        {index === 0
-                          ? "(3 nights)"
-                          : index === 1
-                          ? "(5 nights)"
-                          : "(7 nights)"}
+            {upcomingRetreats.map((retreat) => {
+              const isSoldOut = retreat.spotsLeft === 0;
+              const isUrgent = retreat.spotsLeft > 0 && retreat.spotsLeft < 4;
+              return (
+                <motion.div
+                  key={retreat.dateRange}
+                  variants={fadeInUp}
+                  className={`group relative flex flex-col overflow-hidden rounded-2xl border transition-all duration-500 ${
+                    isSoldOut
+                      ? "border-[#2D2A26]/10 bg-white/40"
+                      : "border-[#C8A96E]/15 bg-white hover:border-[#C8A96E]/40 hover:shadow-lg hover:shadow-[#C8A96E]/8"
+                  }`}
+                >
+                  {/* SOLD OUT overlay */}
+                  {isSoldOut && (
+                    <div className="absolute inset-0 z-20 flex items-center justify-center bg-white/70 backdrop-blur-[2px]">
+                      <span className="rounded-full border-2 border-[#2D2A26]/20 px-6 py-2 font-[family-name:var(--font-playfair)] text-lg font-bold uppercase tracking-widest text-[#2D2A26]/40 -rotate-12">
+                        Sold Out
                       </span>
-                    </p>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+                    </div>
+                  )}
+
+                  {/* Urgency badge */}
+                  {isUrgent && (
+                    <div className="urgency-pulse bg-red-500/90 px-3 py-1.5 text-center">
+                      <span className="text-xs font-bold tracking-wide text-white">
+                        Only {retreat.spotsLeft} {retreat.spotsLeft === 1 ? "spot" : "spots"} left!
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="flex flex-1 flex-col p-6">
+                    {/* Calendar date header */}
+                    <div className="mb-4 flex items-center gap-4">
+                      <div className="flex h-16 w-16 flex-shrink-0 flex-col items-center justify-center rounded-xl bg-[#5B7B5E]/10">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#5B7B5E]">
+                          {retreat.month}
+                        </span>
+                        <span className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#2D2A26]">
+                          {retreat.startDay}
+                        </span>
+                      </div>
+                      <div>
+                        <p className="font-[family-name:var(--font-playfair)] text-base font-semibold text-[#2D2A26]">
+                          {retreat.dateRange}
+                        </p>
+                        <p className="text-xs text-[#2D2A26]/50">{retreat.duration}</p>
+                      </div>
+                    </div>
+
+                    {/* Package type */}
+                    <div className="mb-3 inline-flex self-start rounded-full border border-[#C8A96E]/20 bg-[#C8A96E]/8 px-3 py-1">
+                      <span className="text-xs font-medium text-[#C8A96E]">
+                        {retreat.packageType}
+                      </span>
+                    </div>
+
+                    {/* Price */}
+                    <div className="mb-4">
+                      <span className="font-[family-name:var(--font-playfair)] text-2xl font-semibold text-[#2D2A26]">
+                        {retreat.price}
+                      </span>
+                      <span className="ml-1 text-xs text-[#2D2A26]/40">/ person</span>
+                    </div>
+
+                    {/* Spots remaining indicator */}
+                    {!isSoldOut && (
+                      <div className="mb-5">
+                        <div className="flex items-center justify-between text-xs">
+                          <span className={`font-medium ${isUrgent ? "text-red-500" : "text-[#5B7B5E]"}`}>
+                            {retreat.spotsLeft} of 10 spots left
+                          </span>
+                        </div>
+                        <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-[#2D2A26]/5">
+                          <div
+                            className={`h-full rounded-full transition-all duration-700 ${
+                              isUrgent ? "bg-red-400" : "bg-[#5B7B5E]/60"
+                            }`}
+                            style={{ width: `${((10 - retreat.spotsLeft) / 10) * 100}%` }}
+                          />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* CTA */}
+                    <div className="mt-auto">
+                      {isSoldOut ? (
+                        <button
+                          disabled
+                          className="flex w-full items-center justify-center rounded-full border border-[#2D2A26]/10 px-4 py-2.5 text-sm font-medium text-[#2D2A26]/30"
+                        >
+                          Sold Out
+                        </button>
+                      ) : (
+                        <Link
+                          href="/book"
+                          className="flex w-full items-center justify-center gap-2 rounded-full bg-[#5B7B5E] px-4 py-2.5 text-sm font-medium tracking-wide text-white transition-all duration-300 hover:bg-[#4A6A4D] hover:shadow-md"
+                        >
+                          <Calendar className="h-3.5 w-3.5" />
+                          Book This Date
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </section>
