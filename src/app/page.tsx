@@ -47,7 +47,7 @@ const inclusions = [
   {
     icon: Flower2,
     title: "Daily Yoga & Pilates",
-    desc: "Two expertly-led sessions per day \u2014 sunrise flow and afternoon sculpt \u2014 suitable for all levels.",
+    desc: "Two expertly-led sessions per day - sunrise flow and afternoon sculpt - suitable for all levels.",
   },
   {
     icon: UtensilsCrossed,
@@ -67,7 +67,7 @@ const inclusions = [
   {
     icon: Car,
     title: "Airport Transfers",
-    desc: "Private transfer from Palma airport to the villa and back \u2014 you don\u2019t lift a finger.",
+    desc: "Private transfer from Palma airport to the villa and back. You don't lift a finger.",
   },
   {
     icon: Waves,
@@ -100,7 +100,7 @@ const packages = [
     name: "The Full Transformation",
     duration: "7 nights / 8 days",
     price: "\u20AC3,850",
-    desc: "A full week to completely reset your body, mind, and spirit. You\u2019ll leave feeling like a different person.",
+    desc: "A full week to completely reset your body, mind, and spirit. You'll leave feeling like a different person.",
     highlight: false,
   },
 ];
@@ -120,17 +120,17 @@ const schedule = [
 
 const testimonials = [
   {
-    text: "I came to Alma feeling completely burnt out and left feeling like I\u2019d been given a whole new body. The villa is unreal \u2014 I couldn\u2019t stop taking photos. The food alone is worth the trip.",
+    text: "I came to Alma feeling completely burnt out and left feeling like I'd been given a whole new body. The villa is unreal - I couldn't stop taking photos. The food alone is worth the trip.",
     name: "Sophie L.",
     location: "London",
   },
   {
-    text: "This was supposed to be a solo trip but I left with 8 new best friends. The instructors are world-class, the location is paradise, and every single detail is thought of. I\u2019m already booked for next year.",
+    text: "This was supposed to be a solo trip but I left with 8 new best friends. The instructors are world-class, the location is paradise, and every single detail is thought of. I'm already booked for next year.",
     name: "Emma K.",
     location: "Amsterdam",
   },
   {
-    text: "I\u2019ve done retreats in Bali, Tulum, and Costa Rica \u2014 Alma blows them all out of the water. The villa is next-level luxury and you can tell every meal and class is crafted with so much love.",
+    text: "I've done retreats in Bali, Tulum, and Costa Rica. Alma blows them all out of the water. The villa is next-level luxury and you can tell every meal and class is crafted with so much love.",
     name: "Charlotte M.",
     location: "New York",
   },
@@ -328,7 +328,7 @@ export default function Home() {
                   <em>you</em> actually need.
                 </p>
                 <p>
-                  This isn&apos;t just a retreat &mdash; it&apos;s a full reset. Picture
+                  This isn&apos;t just a retreat - it&apos;s a full reset. Picture
                   yourself waking up to Mediterranean sunlight pouring through
                   floor-to-ceiling windows, the sound of waves just below. Your
                   mornings start with sunrise yoga on a terrace overlooking the
@@ -337,7 +337,7 @@ export default function Home() {
                   under the stars, surrounded by women who just <em>get it</em>.
                 </p>
                 <p>
-                  Every detail at Alma has been designed with you in mind &mdash;
+                  Every detail at Alma has been designed with you in mind -
                   from the luxury suites with marble finishes to the carefully
                   curated classes led by world-class instructors. You don&apos;t
                   need to plan a thing. Just arrive, let go, and let us take care
@@ -463,7 +463,7 @@ export default function Home() {
               variants={fadeInUp}
               className="mx-auto mt-4 max-w-xl text-[#2D2A26]/60"
             >
-              From long weekends to full transformative weeks &mdash; find the
+              From long weekends to full transformative weeks - find the
               getaway that fits your life.
             </motion.p>
           </motion.div>

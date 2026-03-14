@@ -28,7 +28,7 @@ const patterns: Record<BreathPattern, PatternConfig> = {
   },
   box: {
     name: 'Box Breathing',
-    description: 'Balanced breath: 4s each — Inhale, Hold, Exhale, Hold',
+    description: 'Balanced breath: 4s each - Inhale, Hold, Exhale, Hold',
     phases: [
       { name: 'Inhale', duration: 4 },
       { name: 'Hold', duration: 4 },
@@ -362,7 +362,7 @@ export default function MeditationTimer() {
           className="text-center"
         >
           <p className="text-lg font-semibold text-[#5B7B5E]">
-            Beautiful session — +{XP_REWARDS.MEDITATION_SESSION} XP earned
+            Beautiful session - +{XP_REWARDS.MEDITATION_SESSION} XP earned
           </p>
           <p className="mt-1 text-sm text-[#2D2A26]/50">
             {cycleCount} cycle{cycleCount !== 1 ? 's' : ''} completed in {formatTime(totalElapsed)}

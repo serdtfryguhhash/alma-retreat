@@ -47,7 +47,7 @@ export const quizQuestions: QuizQuestion[] = [
       { text: 'Channel it into physical movement or exercise', scores: { Warrior: 3, Explorer: 1 } },
       { text: 'Seek solitude and reflect on the root cause', scores: { Sage: 3, Healer: 1 } },
       { text: 'Reach out to comfort or be comforted by others', scores: { Nurturer: 3, Healer: 1 } },
-      { text: 'Try something new — a class, a recipe, a place', scores: { Explorer: 3, Warrior: 1 } },
+      { text: 'Try something new - a class, a recipe, a place', scores: { Explorer: 3, Warrior: 1 } },
     ],
   },
   {
@@ -119,7 +119,7 @@ export const archetypeDescriptions: Record<WellnessArchetype, {
     strengths: ['Curiosity', 'Adaptability', 'Open-mindedness', 'Spontaneity'],
     recommendations: [
       'Outdoor yoga in new environments',
-      'Eclectic class variety — try everything',
+      'Eclectic class variety - try everything',
       'Nature hikes with mindful walking',
       'Fusion practices (yoga + dance, etc.)',
       'Cultural immersion experiences',

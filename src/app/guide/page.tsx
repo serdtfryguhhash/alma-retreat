@@ -58,7 +58,7 @@ export default function GuidePage() {
     } catch {
       addChatMessage({
         role: 'assistant',
-        content: 'I apologize — I was unable to process your request right now. Please try again in a moment.',
+        content: 'I apologize - I was unable to process your request right now. Please try again in a moment.',
       });
     } finally {
       setIsLoading(false);

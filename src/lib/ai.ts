@@ -10,7 +10,7 @@ export async function getWellnessGuidance(
   streak: number,
   userMessage: string
 ): Promise<string> {
-  const systemPrompt = `You are the Alma Retreat AI Wellness Guide — a warm, knowledgeable, and compassionate wellness advisor for a luxury yoga and pilates retreat in Mallorca, Spain.
+  const systemPrompt = `You are the Alma Retreat AI Wellness Guide - a warm, knowledgeable, and compassionate wellness advisor for a luxury yoga and pilates retreat in Mallorca, Spain.
 
 Your role is to provide personalized guidance on:
 - Yoga sequences and pose recommendations

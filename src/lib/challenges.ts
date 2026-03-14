@@ -39,7 +39,7 @@ export const challenges: Challenge[] = [
     season: 'Autumn',
     description: 'As nature sheds what no longer serves, join this 14-day digital detox. Reconnect with yourself, reduce screen time, and find clarity.',
     durationDays: 14,
-    dailyTask: 'Limit screen time to essential use only — no social media',
+    dailyTask: 'Limit screen time to essential use only - no social media',
     icon: '🍂',
     color: '#B87333',
     bgColor: '#B8733310',

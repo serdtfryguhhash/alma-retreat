@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: "Alma Retreat Mallorca — Luxury Yoga & Pilates Retreats in Camp de Mar",
+  title: "Alma Retreat Mallorca - Luxury Yoga & Pilates Retreats in Camp de Mar",
   description:
     "Escape to a breathtaking modern mansion in Mallorca for transformative yoga and pilates retreats. All-inclusive luxury with ocean views, gourmet plant-based cuisine, spa treatments, and world-class instruction.",
   keywords:

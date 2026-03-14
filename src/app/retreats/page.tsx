@@ -45,13 +45,13 @@ const packages = [
       "Private airport transfers",
     ],
     quote:
-      "Perfect if you\u2019re short on time but desperate for a reset. You\u2019ll be amazed how different you feel in just 4 days.",
+      "Perfect if you're short on time but desperate for a reset. You'll be amazed how different you feel in just 4 days.",
   },
   {
     name: "The Deep Dive",
     duration: "5 Nights / 6 Days",
     price: "2,950",
-    bestFor: "Our most popular package \u2014 deep enough to truly transform",
+    bestFor: "Our most popular package - deep enough to truly transform",
     schedule: "Monday arrival \u2192 Saturday departure",
     popular: true,
     includes: [
@@ -68,7 +68,7 @@ const packages = [
       "Private airport transfers",
     ],
     quote:
-      "This is where the magic happens. Five nights is the sweet spot \u2014 long enough to shed the stress, reconnect with yourself, and actually feel the transformation.",
+      "This is where the magic happens. Five nights is the sweet spot - long enough to shed the stress, reconnect with yourself, and actually feel the transformation.",
   },
   {
     name: "The Full Transformation",
@@ -92,7 +92,7 @@ const packages = [
       "Private airport transfers",
     ],
     quote:
-      "This is for the woman who\u2019s ready to go all in. A full week to let go of everything that\u2019s been weighing you down and step into a completely new chapter.",
+      "This is for the woman who's ready to go all in. A full week to let go of everything that's been weighing you down and step into a completely new chapter.",
   },
 ];
 
@@ -424,7 +424,7 @@ export default function RetreatsPage() {
                 Solo Travelers Welcome
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-[#2D2A26]/60">
-                Over 60% of our guests come alone &mdash; and leave with lifelong
+                Over 60% of our guests come alone - and leave with lifelong
                 friends. You&apos;ll feel right at home from the moment you
                 arrive.
               </p>
@@ -468,7 +468,7 @@ export default function RetreatsPage() {
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-[#2D2A26]/60">
                 Free cancellation up to 60 days out. 50% refund 30&ndash;60 days.
-                No refunds within 30 days. We understand life happens &mdash;
+                No refunds within 30 days. We understand life happens -
                 speak to us and we&apos;ll always try to find a solution.
               </p>
             </motion.div>
@@ -481,7 +481,7 @@ export default function RetreatsPage() {
         <div className="section-divider" />
       </div>
 
-      {/* Upcoming Retreats — Availability Calendar */}
+      {/* Upcoming Retreats - Availability Calendar */}
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
@@ -641,7 +641,7 @@ export default function RetreatsPage() {
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-[#2D2A26]/60">
               Spaces are limited to 10 guests per retreat. Don&apos;t wait until
-              the perfect moment &mdash; the perfect moment is right now.
+              the perfect moment - the perfect moment is right now.
             </p>
             <Link
               href="/book"
@@ -657,7 +657,7 @@ export default function RetreatsPage() {
               >
                 Get in touch
               </a>{" "}
-              &mdash; we&apos;d love to hear from you.
+              - we&apos;d love to hear from you.
             </p>
           </motion.div>
         </div>

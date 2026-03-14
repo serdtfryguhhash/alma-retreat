@@ -6,8 +6,7 @@ const footerLinks = [
   { href: "/experience", label: "Experience" },
   { href: "/retreats", label: "Retreats" },
   { href: "/book", label: "Book Now" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/terms", label: "Terms" },
+  { href: "/book", label: "FAQ" },
 ];
 
 export default function Footer() {

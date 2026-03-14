@@ -53,13 +53,13 @@ const features = [
     icon: ChefHat,
     title: "Gourmet Kitchen",
     description:
-      "State-of-the-art chef\u2019s kitchen where our culinary team prepares your daily meals",
+      "State-of-the-art chef's kitchen where our culinary team prepares your daily meals",
   },
   {
     icon: Sun,
     title: "Yoga Terrace",
     description:
-      "Open-air terrace with sea breezes \u2014 your practice space with the best view on the island",
+      "Open-air terrace with sea breezes - your practice space with the best view on the island",
   },
   {
     icon: Star,
@@ -158,7 +158,7 @@ export default function VillaPage() {
               our guests never want to leave. Floor-to-ceiling windows frame
               panoramic views of the Mediterranean. Sunlight dances across
               Italian marble floors. Every room has been designed to feel like a
-              sanctuary &mdash; because that&apos;s exactly what it is.
+              sanctuary - because that&apos;s exactly what it is.
             </p>
           </motion.div>
         </div>

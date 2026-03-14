@@ -7,7 +7,7 @@ export function getStreakStatus(lastActiveDate: string | null, currentStreak: nu
     return {
       isActive: false,
       streakText: '0 days',
-      motivationalMessage: 'Begin your journey today — every practice starts with a single breath.',
+      motivationalMessage: 'Begin your journey today - every practice starts with a single breath.',
     };
   }
 
@@ -21,7 +21,7 @@ export function getStreakStatus(lastActiveDate: string | null, currentStreak: nu
   if (currentStreak >= 30) {
     motivationalMessage = 'You are a beacon of dedication. Your practice has become part of who you are.';
   } else if (currentStreak >= 14) {
-    motivationalMessage = 'Two weeks of commitment — you are building something beautiful.';
+    motivationalMessage = 'Two weeks of commitment - you are building something beautiful.';
   } else if (currentStreak >= 7) {
     motivationalMessage = 'One full week! Your consistency is inspiring. Keep going.';
   } else if (currentStreak >= 3) {
@@ -29,7 +29,7 @@ export function getStreakStatus(lastActiveDate: string | null, currentStreak: nu
   } else if (currentStreak >= 1) {
     motivationalMessage = 'Every journey begins with a single step. You have taken yours.';
   } else {
-    motivationalMessage = 'Return to your practice — your mat is always waiting for you.';
+    motivationalMessage = 'Return to your practice - your mat is always waiting for you.';
   }
 
   return { isActive, streakText, motivationalMessage };

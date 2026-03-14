@@ -105,7 +105,7 @@ export default function ExperiencePage() {
             >
               <div className="gold-line mb-6" />
               <h1 className="font-[family-name:var(--font-playfair)] text-5xl font-semibold leading-tight text-white md:text-6xl lg:text-7xl">
-                More Than a Retreat &mdash; A Complete Reset
+                More Than a Retreat - A Complete Reset
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-white/80 md:text-xl">
                 Every element of your stay has been thoughtfully designed to
@@ -153,7 +153,7 @@ export default function ExperiencePage() {
                 Whether you&apos;re flowing through your thousandth vinyasa or
                 stepping onto the mat for the very first time, our instructors
                 create space for every body and every level. Morning sessions are
-                dynamic and energizing &mdash; think sun salutations with the actual
+                dynamic and energizing - think sun salutations with the actual
                 sun rising over the sea. Evening sessions are slow, restorative,
                 and deeply grounding. You&apos;ll practice on our open-air terrace
                 with the sound of waves as your soundtrack.
@@ -198,11 +198,11 @@ export default function ExperiencePage() {
               <div className="mt-6 gold-line" />
               <p className="mt-8 text-base leading-relaxed text-[#2D2A26]/70 md:text-lg">
                 Our Pilates sessions are designed to complement your yoga
-                practice &mdash; building the deep core strength and body awareness
+                practice - building the deep core strength and body awareness
                 that transforms how you move both on and off the mat. Using a
                 mix of mat work and small props, our certified instructors will
                 challenge you in the best way possible. You&apos;ll feel muscles you
-                didn&apos;t know you had &mdash; and you&apos;ll love it.
+                didn&apos;t know you had - and you&apos;ll love it.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 {pilatesFocus.map((focus) => (
@@ -315,13 +315,13 @@ export default function ExperiencePage() {
               <p className="mt-8 text-base leading-relaxed text-[#2D2A26]/70 md:text-lg">
                 Forget everything you think you know about &lsquo;retreat
                 food.&rsquo; Our private chef creates extraordinary plant-based
-                meals using the freshest local Mallorcan ingredients &mdash;
+                meals using the freshest local Mallorcan ingredients -
                 think heirloom tomatoes still warm from the garden, just-caught
                 fish from the local market (for those who want it), and desserts
                 that will make you forget they&apos;re healthy. Three full meals a
                 day, plus smoothies, cold-pressed juices, and snacks available
                 whenever you want them. Dietary requirements aren&apos;t just
-                accommodated &mdash; they&apos;re celebrated.
+                accommodated - they&apos;re celebrated.
               </p>
               <div className="mt-8 rounded-xl border border-[#C8A96E]/15 bg-[#C8A96E]/5 p-6">
                 <p className="text-sm font-medium text-[#2D2A26]/80">

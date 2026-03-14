@@ -35,19 +35,19 @@ const faqs = [
       "Absolutely not! Our sessions are designed for all levels, from complete beginners to advanced practitioners. Our instructors offer modifications for every pose, so you'll never feel out of your depth. Whether it's your first downward dog or your ten-thousandth, you're welcome here.",
   },
   {
-    question: "I'm coming alone — will I feel awkward?",
+    question: "I'm coming alone - will I feel awkward?",
     answer:
       "Not even for a second. Over 60% of our guests come solo, and it's honestly the best way to experience Alma. Within hours of arriving, you'll feel like you've known these women for years. Our welcome ceremony is designed to break the ice, and by dinner on night one, you'll have a whole new girl gang.",
   },
   {
     question: "What should I pack?",
     answer:
-      "Think comfortable, breathable clothes for practice — leggings, tanks, sports bras. A light jacket for evenings (it can get cool on the terrace after sunset). Swimwear for the pool and beach. A nice outfit if you want to feel cute at dinner (totally optional — we love barefoot vibes too). We provide yoga mats, blocks, and all props.",
+      "Think comfortable, breathable clothes for practice - leggings, tanks, sports bras. A light jacket for evenings (it can get cool on the terrace after sunset). Swimwear for the pool and beach. A nice outfit if you want to feel cute at dinner (totally optional - we love barefoot vibes too). We provide yoga mats, blocks, and all props.",
   },
   {
     question: "What are the meals like?",
     answer:
-      "Three words: absolutely incredible. Our private chef prepares three gourmet meals a day, primarily plant-based with pescatarian options available. Think colourful Buddha bowls, fresh Mediterranean salads, homemade sourdough, smoothie bowls, and desserts that taste too good to be healthy. Fresh juices and snacks are available all day. We accommodate all dietary needs — just let us know when you book.",
+      "Three words: absolutely incredible. Our private chef prepares three gourmet meals a day, primarily plant-based with pescatarian options available. Think colourful Buddha bowls, fresh Mediterranean salads, homemade sourdough, smoothie bowls, and desserts that taste too good to be healthy. Fresh juices and snacks are available all day. We accommodate all dietary needs - just let us know when you book.",
   },
   {
     question: "Is alcohol available?",
@@ -57,12 +57,12 @@ const faqs = [
   {
     question: "How do I get to the villa?",
     answer:
-      "Fly into Palma de Mallorca Airport (PMI). We handle everything from there — your private transfer will be waiting to whisk you to Camp de Mar (about 35 minutes). Just send us your flight details and we'll sort the rest.",
+      "Fly into Palma de Mallorca Airport (PMI). We handle everything from there - your private transfer will be waiting to whisk you to Camp de Mar (about 35 minutes). Just send us your flight details and we'll sort the rest.",
   },
   {
     question: "What's the cancellation policy?",
     answer:
-      "Life happens — we get it. Free cancellation up to 60 days before your retreat. Cancel 30–60 days out and you'll receive a 50% refund. Within 30 days, we're unable to offer refunds, but you can transfer your booking to a friend or move to a future date.",
+      "Life happens - we get it. Free cancellation up to 60 days before your retreat. Cancel 30–60 days out and you'll receive a 50% refund. Within 30 days, we're unable to offer refunds, but you can transfer your booking to a friend or move to a future date.",
   },
   {
     question: "Can I extend my stay?",
@@ -77,7 +77,7 @@ const faqs = [
   {
     question: "What's the WiFi situation?",
     answer:
-      "The villa has high-speed WiFi throughout. That said, we gently encourage a bit of a digital detox — your Instagram can wait, but this sunset can't.",
+      "The villa has high-speed WiFi throughout. That said, we gently encourage a bit of a digital detox - your Instagram can wait, but this sunset can't.",
   },
 ];
 
@@ -561,7 +561,7 @@ export default function BookPage() {
             >
               hello@almaretreat.com
             </a>{" "}
-            — we reply within 24 hours.
+            - we reply within 24 hours.
           </p>
         </motion.div>
       </section>
